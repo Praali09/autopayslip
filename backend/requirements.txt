@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+alembic
+pydantic
+jinja2
+weasyprint
+python-multipart
+sqlalchemy-utils
+email-validator
+python-dotenv

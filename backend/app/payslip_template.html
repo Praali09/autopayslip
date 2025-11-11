@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Payslip</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .card { border: 1px solid #333; padding: 16px; border-radius: 8px; }
+    table { width:100%; border-collapse: collapse; margin-top:10px; }
+    td, th { padding:8px; border:1px solid #ccc; text-align:left; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Government Institute - Payslip</h2>
+    <p><strong>Employee:</strong> {{ context.employee.name }} ({{ context.employee.emp_code }})</p>
+    <p><strong>Month:</strong> {{ context.month }} / {{ context.year }}</p>
+    <table>
+      <tr><th>Description</th><th>Amount</th></tr>
+      <tr><td>Basic Pay</td><td>{{ context.base }}</td></tr>
+      <tr><td>Gross</td><td>{{ context.gross }}</td></tr>
+      <tr><td>Total Deductions</td><td>{{ context.deductions }}</td></tr>
+      <tr><th>Net Pay</th><th>{{ context.net }}</th></tr>
+    </table>
+  </div>
+</body>
+</html>
